@@ -3,9 +3,10 @@ This is a counter web app built in Ruby using Sinatra and Capybara. This app use
 
 # Setting up the database
 1. Connect to psql
-2. Create the database using the psql command CREATE DATABASE count_manager;
-3. Connect to the database using the pqsl command \c count_manager;
-4. Run the query we have saved in the file 01_create_counter_table.sql
+2. Create the production and test databases using the psql commands `CREATE DATABASE count_manager` and `CREATE DATABASE count_manager_test`;
+3. Connect to the production database using the pqsl command ``\c count_manager`;
+4. Run the query we have saved in the file `01_create_counter_table.sql`
+5. Repeat steps 3 and 4 for the test database.
 
 # How to run the app
 1. Clone this repository

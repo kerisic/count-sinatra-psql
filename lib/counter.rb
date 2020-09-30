@@ -11,7 +11,12 @@ class Counter
   end
 
   def count
-    connection = PG.connect(dbname: 'count_manager')
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'count_manager_test')
+    else
+      connection = PG.connect(dbname: 'count_manager')
+    end
+
     result = connection.exec("SELECT * FROM counter WHERE id=1;")
     result[0]['count'].to_i
   end
