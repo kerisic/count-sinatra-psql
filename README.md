@@ -1,5 +1,5 @@
 # Description
-This is a counter web app built in Ruby using Sinatra and Capybara.
+This is a counter web app built in Ruby using Sinatra and Capybara. This app uses PostgreSQL to store the count.
 
 # How to run the app
 1. Clone this repository
