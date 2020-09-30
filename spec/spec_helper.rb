@@ -13,7 +13,15 @@
 # it.
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
+require_relative './setup_test_database'
+
 ENV['ENVIRONMENT'] = 'test'
+
+RSpec.configure do |config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
