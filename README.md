@@ -1,6 +1,12 @@
 # Description
 This is a counter web app built in Ruby using Sinatra and Capybara. This app uses PostgreSQL to store the count.
 
+# Setting up the database
+1. Connect to psql
+2. Create the database using the psql command CREATE DATABASE count_manager;
+3. Connect to the database using the pqsl command \c count_manager;
+4. Run the query we have saved in the file 01_create_counter_table.sql
+
 # How to run the app
 1. Clone this repository
 2. `cd` into the cloned directory
