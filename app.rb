@@ -1,5 +1,6 @@
 require "sinatra"
-require_relative "./lib/counter"
+require "./lib/counter"
+require './database_connection_setup'
 
 class CounterApp < Sinatra::Base
 
