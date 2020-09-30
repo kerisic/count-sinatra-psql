@@ -3,8 +3,8 @@ This is a counter web app built in Ruby using Sinatra and Capybara. This app use
 
 # Setting up the database
 1. Connect to psql
-2. Create the production and test databases using the psql commands `CREATE DATABASE count_manager` and `CREATE DATABASE count_manager_test`;
-3. Connect to the production database using the pqsl command ``\c count_manager`;
+2. Create the production and test databases using the psql commands `CREATE DATABASE count_manager;` and `CREATE DATABASE count_manager_test;`
+3. Connect to the production database using the pqsl command `\c count_manager;`
 4. Run the query we have saved in the file `01_create_counter_table.sql`
 5. Repeat steps 3 and 4 for the test database.
 
@@ -22,9 +22,9 @@ This is a counter web app built in Ruby using Sinatra and Capybara. This app use
 4. Run `rspec`
 
 # Questions to explore
-* Where are each of the three components of the MVC framework found in this application?
+* What is the difference in behaviour between this app and one which there is no database?
+* Where are each of the three components of the MVC framework found in this application? Which of these components interacts with the database?
 * What parts of the code run when we run the app in our browser? You could test your assumption by adding `p` lines and checking that you see the output you expect.
 * What part of the code runs when we click the "Increment" button?
 * Can you add a "Decrement" button which decreases the count by 1 each time it is pressed?
-* Can you update the app to display the time that the count was last updated?
-* Can you add a "Reset" button which will put the count back to zero?
+* Can you update the app to display the time that the count was last updated? This value should be stored in the database so that it will be accurately displayed even if the server is restarted.

@@ -1,7 +1,6 @@
 require 'pg'
 
 class Counter
-
   def count
     if ENV['ENVIRONMENT'] == 'test'
       connection = PG.connect(dbname: 'count_manager_test')
