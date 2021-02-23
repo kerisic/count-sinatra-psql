@@ -15,4 +15,13 @@ describe Counter do
       expect(counter.count).to eq 1
     end
   end
+
+  describe '#descrement' do
+    it 'takes away 1 from the count' do
+      counter = Counter.new
+      counter.increment
+      counter.decrement
+      expect(counter.count).to eq 0
+    end
+  end
 end
